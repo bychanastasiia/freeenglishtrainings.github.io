@@ -116,5 +116,67 @@
     <div class="exercise">3. Make 2 sentences with <b>should</b> (advice).</div>
     <div class="exercise">4. Write 2 possibilities for tomorrow using <b>may</b> or <b>might</b>.</div>
   </div>
+  <h2>Multiple Choice Exercise</h2>
+
+<div class="exercise">
+  <p>1. She ___ go to school tomorrow.</p>
+  <label><input type="radio" name="q1" value="must"> must</label><br>
+  <label><input type="radio" name="q1" value="have to"> have to</label><br>
+  <label><input type="radio" name="q1" value="would not"> would not</label><br>
+  <label><input type="radio" name="q1" value="could"> could</label>
+</div>
+
+<button class="check-btn" onclick="checkAnswers()">Check</button>
+<div id="result"></div>
+
+<style>
+  .check-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #f1642e;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .check-btn:hover {
+    background-color: #d9531f;
+  }
+
+  #result {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+</style>
+
+<script>
+  function checkAnswers() {
+    let score = 0;
+    let total = 1; // количество тестовых вопросов
+
+    // правильные ответы
+    const answers = {
+      q1: "must"
+    };
+
+    for (let q in answers) {
+      let radios = document.getElementsByName(q);
+      for (let radio of radios) {
+        if (radio.checked && radio.value === answers[q]) {
+          score++;
+        }
+      }
+    }
+
+    document.getElementById("result").textContent =
+      "Your score: " + score + " / " + total;
+  }
+</script>
 </body>
 </html>
