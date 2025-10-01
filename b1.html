@@ -2,75 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Level B1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B1 Page</title>
   <style>
     body {
+      background-color: #fdf8e2; /* Нежно-желтый */
       margin: 0;
-      font-family: 'Overdoze Sans', sans-serif;
-      background-color: #fdf8e2; /* сливочно-жёлтый */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px;
+      font-family: Arial, sans-serif;
     }
 
-    h1 {
-      font-size: 50px;
+    /* Кнопка назад */
+    .back-button {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: none;
+      border: none;
+      font-size: 28px;
       color: #a3b565; /* оливковый */
-      margin-bottom: 40px;
+      cursor: pointer;
     }
 
+    .back-button:hover {
+      color: #6d8142; /* темнее при наведении */
+    }
+
+    /* Заголовок */
+    h1 {
+      text-align: center;
+      margin-top: 60px; /* чтобы не налезало на кнопку */
+      color: #a3b565;
+      font-size: 36px;
+    }
+
+    /* Контейнер для тем */
     .topics {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      width: 80%;
-      max-width: 800px;
+      align-items: center;
+      gap: 15px;
+      margin: 30px auto;
+      max-width: 600px;
     }
 
+    /* Блок темы */
     .topic {
-      background-color: #fcdd9d; /* ярко-жёлтый */
-      color: #f1642e; /* оранжевый */
-      font-size: 22px;
+      width: 100%;
+      background-color: #fcdd9d; /* ярко-желтый */
+      color: #f1642e; /* ярко-оранжевый */
+      padding: 15px;
+      font-size: 20px;
       font-weight: bold;
-      padding: 20px;
-      border-radius: 15px;
+      text-align: center;
+      border-radius: 12px;
       cursor: pointer;
-      text-decoration: none;
-      display: block;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: 0.3s;
     }
 
     .topic:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+      background-color: #fbcf72;
     }
   </style>
 </head>
 <body>
+  <!-- Кнопка "назад" -->
+  <button class="back-button" onclick="history.back()">←</button>
+
+  <!-- Заголовок -->
   <h1>LEVEL B1</h1>
 
+  <!-- Список тем -->
   <div class="topics">
-    <a href="b1_present_perfect.html" class="topic">Present Perfect (for, since, already, yet, just) + Present Perfect or Past Simple</a>
-    <a href="b1_past_continuous.html" class="topic">Past Continuous</a>
-    <a href="b1_future_past.html" class="topic">Future in the past (was / were going to / would)</a>
-    <a href="b1_future_continuous.html" class="topic">Future Continuous forms</a>
-    <a href="b1_present_perf_cont.html" class="topic">Present Perfect Continuous forms</a>
-    <a href="b1_past_perfect.html" class="topic">Past Perfect forms</a>
-    <a href="b1_questions.html" class="topic">Subject and Object questions</a>
-    <a href="b1_nouns_plural.html" class="topic">Nouns that are always plural</a>
-    <a href="b1_collective_nouns.html" class="topic">Collective nouns with singular or plural verbs</a>
-    <a href="b1_other.html" class="topic">Other / The other / Another</a>
-    <a href="b1_such.html" class="topic">Such and such a</a>
-    <a href="b1_either.html" class="topic">Either or / Neither nor / Both</a>
-    <a href="b1_passive.html" class="topic">Passive voice</a>
-    <a href="b1_reported.html" class="topic">Reported speech</a>
-    <a href="b1_modals.html" class="topic">Modal verbs</a>
-    <a href="b1_conditionals.html" class="topic">Conditionals</a>
-    <a href="b1_adjectives.html" class="topic">Adjectives (Order of adjectives)</a>
-    <a href="b1_prepositions.html" class="topic">Prepositions</a>
-    <a href="b1_adverbs.html" class="topic">Adverbs</a>
+    <div class="topic">Present Perfect (for, since, already, yet, just) + Present Perfect or Past Simple</div>
+    <div class="topic">Past Continuous</div>
+    <div class="topic">Future in the past (was / were going to, would)</div>
+    <div class="topic">Future Continuous forms</div>
+    <div class="topic">Present Perfect Continuous forms</div>
+    <div class="topic">Past Perfect forms</div>
+    <div class="topic">Subject and Object Questions</div>
+    <div class="topic">Nouns that are always plural</div>
+    <div class="topic">Collective nouns with singular or plural verbs</div>
+    <div class="topic">Other / the other / another</div>
+    <div class="topic">Such and such a</div>
+    <div class="topic">Either or, neither nor, both ..</div>
+    <div class="topic">Passive Voice</div>
+    <div class="topic">Reported Speech</div>
+    <div class="topic">Modal Verbs</div>
+    <div class="topic">Conditionals</div>
+    <div class="topic">Adjectives (Order of adjectives)</div>
+    <div class="topic">Prepositions</div>
+    <div class="topic">Adverbs</div>
   </div>
-
 </body>
 </html>
